@@ -7,7 +7,7 @@
 <link rel=stylesheet href={% static 'main/css/main.css' %}>
 </head>
 <body>
-<h1>Wiki 說--看看你/妳的極限能到哪裡</h1>
+<h1>Wiki 說--挑戰你/妳的極限吧</h1>
 {% if categories %}
 	<h2>章節分類:</h2>
 	<table>
@@ -17,7 +17,7 @@
 			{% endfor %}
 	</table>
 {% else %}
-	<p><strong>目前尚未設定程式語言分類。</strong></p>
+	<p><strong>目前尚未設定章節分類。</strong></p>
 {% endif %}
 
 <p><a href={% url 'main:main' %}>回首頁</a></p>

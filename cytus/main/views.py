@@ -4,7 +4,7 @@ import datetime
 
 def main(request):
     now = datetime.datetime.now()
-    context = {'like':'Cytus是雷亞公司的處女作', 'now':now}
+    context = {'like':'地獄章節L章已經來臨', 'now':now}
     return render(request, 'main/main.html', context)
 
 
