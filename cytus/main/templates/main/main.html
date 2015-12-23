@@ -1,18 +1,12 @@
-<!doctype html>
-{% load staticfiles %}
-<html>
-<head>
-<title>Cytus</title>
-<meta charset=utf-8>
-<link rel=stylesheet href={% static 'main/css/main.css' %}>
-</head>
-<body>
-<h1>Cytus說--喚醒你/妳的音樂細胞</h1>
-<p>{{like}}</p>
-<p>現在時間:{{now}}</p>
-<p><a href={% url 'main:about' %}>關於Cytus</a></p>
-<p><a href={% url 'wiki:wiki' %}>Cytus Wiki</a></p>
-<p><a href={% url 'story:story' %}>Cytus故事</a></p>
+{% extends "main/base.html" %}
+{% block heading %}喚醒你/妳的音樂細胞{% endblock %}
+{% block content %}
+
+<h2>{{like}}</h2>
+<p><a href={% url 'main:about' %}>關於</a></p>
+<p><a href={% url 'wiki:wiki' %}>Wiki</a></p>
+<p><a href={% url 'story:story' %}>故事</a></p>
 <p><a href={% url 'record:record' %}>Cytus之金氏紀錄</a></p>
-</body>
-</html>
+<p>現在時間:{{now}}</p>
+
+{% endblock %}

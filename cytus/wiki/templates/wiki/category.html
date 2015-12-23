@@ -1,15 +1,8 @@
-<!doctype html>
-{% load staticfiles %}
-<html>
-<head>
-<title>Cytus Wiki</title>
-<meta charset=utf-8>
-<link rel=stylesheet href="{% static 'main/css/main.css' %}">
-</head>
-<body>
+{% extends "main/base.html" %}
+{% block heading %}{{category.name}}{% endblock %}
+{% block content %}
 
 {% if category %}
-	<h1>{{category.name}}</h1>
 		{% if pages %}
 			<table>
 				<tr><th>曲目名稱</th></tr>
@@ -42,5 +35,4 @@
 {% endif %}
 <p><a href={% url 'wiki:wiki' %}>回 Wiki 網頁</a></p>
 
-</body>
-</html>
+{% endblock %}

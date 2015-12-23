@@ -1,13 +1,7 @@
-<!doctype html>
-{% load staticfiles %}
-<html>
-<head>
-<title>Cytus Wiki</title>
-<meta charset=utf-8>
-<link rel=stylesheet href={% static 'main/css/main.css' %}>
-</head>
-<body>
-<h1>Wiki 說--挑戰你/妳的極限吧</h1>
+{% extends "main/base.html" %}
+{% block heading %}挑戰你/妳的極限吧{% endblock %}
+{% block content %}
+
 {% if categories %}
 	<h2>章節分類:</h2>
 	<table>
@@ -37,5 +31,5 @@
 
 <p><a href={% url 'wiki:addCategory' %}>新增章節分類</a></p>
 <p><a href={% url 'main:main' %}>回首頁</a></p>
-</body>
-</html>
+
+{% endblock %}

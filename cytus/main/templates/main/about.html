@@ -1,15 +1,9 @@
-<!doctype html>
-{% load staticfiles %}
-<html>
-<head>
-<title>關於Cytus</title>
-<meta charset=utf-8>
-<link rel=stylesheet href={% static 'main/css/main.css' %}>
-</head>
-<body>
-<h1>關於Cytus</h1>
+{% extends "main/base.html" %}
+{% block heading %}關於{% endblock %}
+{% block content %}
+
 <p>這是由台灣雷亞遊戲（Rayark）開發的一款音樂節奏遊戲</p>
-<h1>名稱由來</h1>
+<h2>名稱由來</h2>
 <p>Cytus名稱起自於科基托斯（Cocytus），
 是希臘神話中的人物，意義代表為哀嘆之河，
 遊戲用來描述在未來故事人類滅絕後，
@@ -17,5 +11,5 @@
 而將Cocytus的co去除稱「Cytus」並沒有實質上的意義，
 只是認為字母少許容易記憶，並且不會對任何名稱撞名。</p>
 <p><a href={% url 'main:main' %}>回首頁</a></p>
-</body>
-</html>
+
+{% endblock %}
