@@ -1,0 +1,22 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+<head>
+<title>Cytus Wiki</title>
+<meta charset=utf-8>
+<link rel=stylesheet href={% static 'main/css/main.css' %}>
+</head>
+<body>
+
+<h1>新增章節分類</h1>
+<form method=post action={% url 'wiki:addCategory' %}>
+	{% csrf_token %}
+	{{form.as_p}}
+	<input type=submit value=送出>
+</form>
+<br>
+<br>
+<p><a href={% url 'wiki:wiki' %}>回 Wiki 網頁</a></p>
+
+</body>
+</html>
