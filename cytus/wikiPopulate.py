@@ -5,6 +5,7 @@ django.setup()
 from wiki.models import Category, Page
 import random
 
+
 def populate():
     # Chapter I
     category = addCategory('Chapter I')
@@ -70,7 +71,7 @@ def populate():
     addPage(category, 'Chocological', 'http://cytus.wikia.com/wiki/Chocological')
     addPage(category, 'Recollections', 'http://cytus.wikia.com/wiki/Recollections')
     addPage(category, 'Total Sphere', 'http://cytus.wikia.com/wiki/Total_Sphere')
-    addPage(category, 'Just a trip', 'http://cytus.wikia.com/wiki/Just_A_Trip')
+    addPage(category, 'Just A Trip', 'http://cytus.wikia.com/wiki/Just_A_Trip')
     addPage(category, 'Zauberkugel', 'http://cytus.wikia.com/wiki/Zauberkugel')
     addPage(category, 'Biotonic', 'http://cytus.wikia.com/wiki/Biotonic')
     # Chapter VI
@@ -95,7 +96,7 @@ def populate():
     addPage(category, 'L', 'http://cytus.wikia.com/wiki/L')
     addPage(category, 'L2 - Ascension: Act 1 (Loneliness)', 'http://cytus.wikia.com/wiki/L2_-_Ascension:_Act_1_(Loneliness)')
     addPage(category, 'L2 - Ascension: Act 2 (Liberation)', 'http://cytus.wikia.com/wiki/L2_-_Ascension:_Act_2_(Liberation)')
-    addPage(category, 'Gate Of Expectancy', 'http://cytus.wikia.com/wiki/Gate_of_Exceptancy')
+    addPage(category, 'Gate of Expectancy', 'http://cytus.wikia.com/wiki/Gate_of_Exceptancy')
     addPage(category, 'Rainbow Night Sky Highway', 'http://cytus.wikia.com/wiki/Rainbow_Night_Sky_Highway')
     addPage(category, 'Quantum Labyrinth', 'http://cytus.wikia.com/wiki/Quantum_Labyrinth')
     addPage(category, 'Musik', 'http://cytus.wikia.com/wiki/Musik')
@@ -126,11 +127,11 @@ def populate():
     addPage(category, 'First Gate Overdrive', 'http://cytus.wikia.com/wiki/First_Gate_Overdrive')
     addPage(category, 'Qualia', 'http://cytus.wikia.com/wiki/Qualia')
     addPage(category, 'East West Wobble', 'http://cytus.wikia.com/wiki/East_West_Wobble')
-    addPage(category, 'Warlords Of Atlantis', 'http://cytus.wikia.com/wiki/Warlords_of_Atlantis')
+    addPage(category, 'Warlords of Atlantis', 'http://cytus.wikia.com/wiki/Warlords_of_Atlantis')
     addPage(category, 'To Further Dream', 'http://cytus.wikia.com/wiki/To_Further_Dream')
     addPage(category, 'COMA', 'http://cytus.wikia.com/wiki/COMA')
     addPage(category, 'Codename: Zero', 'http://cytus.wikia.com/wiki/Codename_:_Zero')
-    # Chapter X Prologue
+    # Chapter X
     category = addCategory('Chapter X')
     addPage(category, 'Alive: The New World', 'http://cytus.wikia.com/wiki/Alive:The_New_World')
     addPage(category, 'Freedom Dive', 'http://cytus.wikia.com/wiki/Freedom_Dive')
@@ -143,26 +144,112 @@ def populate():
     addPage(category, 'Set Free', 'http://cytus.wikia.com/wiki/Set_Free')
     addPage(category, 'Do Not Wake', 'http://cytus.wikia.com/wiki/Do_Not_Wake')
     addPage(category, 'Gatorix', 'http://cytus.wikia.com/wiki/Gatorix')
-    
+    # Chapter S
+    category = addCategory('Chapter S')
+    addPage(category, 'LVBNR5 Schwarz', 'http://cytus.wikia.com/wiki/LVBNR5_Schwarz')
+    addPage(category, 'Vivere La Vita', 'http://cytus.wikia.com/wiki/Vivere_La_Vita')
+    addPage(category, 'Rain of Fire', 'http://cytus.wikia.com/wiki/Rain_of_Fire')
+    addPage(category, 'Molto Allegro', 'http://cytus.wikia.com/wiki/Molto_Allegro')
+    addPage(category, 'Revoluxionist', 'http://cytus.wikia.com/wiki/Revoluxionist')
+    addPage(category, 'LVBNR5 Weiβ', 'http://cytus.wikia.com/wiki/LVBNR5_Weiβ')
+    addPage(category, 'Chaotic Drive', 'http://cytus.wikia.com/wiki/Chaotic_Drive')
+    addPage(category, 'Outsider', 'http://cytus.wikia.com/wiki/Outsider')
+    addPage(category, 'Requiem', 'http://cytus.wikia.com/wiki/Requiem')
+    addPage(category, 'The Purified', 'http://cytus.wikia.com/wiki/The_Purified')
+    # Chapter K
+    category = addCategory('Chapter K')
+    addPage(category, 'The Way We Were', 'http://cytus.wikia.com/wiki/The_Way_We_Were')
+    addPage(category, 'The Sanctuary', 'http://cytus.wikia.com/wiki/The_Sanctuary')
+    addPage(category, 'The Red Coronation', 'http://cytus.wikia.com/wiki/The_Red_Coronation')
+    addPage(category, 'Forbidden Codex', 'http://cytus.wikia.com/wiki/Forbidden_Codex')
+    addPage(category, 'Knight of Firmament', 'http://cytus.wikia.com/wiki/Knight_of_Firmament')
+    addPage(category, 'Lord of Crimson Rose', 'http://cytus.wikia.com/wiki/Lord_of_Crimson_Rose')
+    addPage(category, 'Predawn', 'http://cytus.wikia.com/wiki/Predawn')
+    addPage(category, 'The Fallen Bloom', 'http://cytus.wikia.com/wiki/The_Fallen_Bloom')
+    addPage(category, 'Where You Are Not', 'http://cytus.wikia.com/wiki/Where_You_Are_Not')
+    addPage(category, 'Music. The Eternity of Us', 'http://cytus.wikia.com/wiki/Music._The_Eternity_of_Us')
+    # Chapter R
+    category = addCategory('Chapter R')
+    addPage(category, 'Theme of Kingdom No.8', 'http://cytus.wikia.com/wiki/Theme_of_Kingdom_No.8')
+    addPage(category, 'Jump To The Future', 'http://cytus.wikia.com/wiki/Jump_To_The_Future')
+    addPage(category, 'Let,s Go On An Adventure', 'http://cytus.wikia.com/wiki/Let%27s_Go_On_An_Adventure')
+    addPage(category, 'Hay Fields', 'http://cytus.wikia.com/wiki/Hay_Fields')
+    addPage(category, 'Adventure', 'http://cytus.wikia.com/wiki/Adventure')
+    addPage(category, 'Dream (Chiptune Edit)', 'http://cytus.wikia.com/wiki/Dream_(Chiptune_Edit)')
+    addPage(category, 'VitMaster', 'http://cytus.wikia.com/wiki/VitMaster')
+    addPage(category, 'Fight With Your Devil', 'http://cytus.wikia.com/wiki/Fight_With_Your_Devil')
+    addPage(category, 'Devil in Wonderland', 'http://cytus.wikia.com/wiki/Devil_in_Wonderland')
+    addPage(category, 'Conflict (YM2151 Edit)', 'http://cytus.wikia.com/wiki/Conflict_(YM2151_Edit)')
+    addPage(category, 'Conflict', 'http://cytus.wikia.com/wiki/Conflict')
+    # Chapter M
+    category = addCategory('Chapter M')
+    addPage(category, 'The Beginning', 'http://cytus.wikia.com/wiki/The_Beginning')
+    addPage(category, 'Stardust Sphere', 'http://cytus.wikia.com/wiki/Stardust_Sphere')
+    addPage(category, 'The Ricochet', 'http://cytus.wikia.com/wiki/The_Ricochet')
+    addPage(category, 'The Long Years', 'http://cytus.wikia.com/wiki/The_Long_Years')
+    addPage(category, 'The Sacred Story', 'http://cytus.wikia.com/wiki/The_Sacred_Story')
+    addPage(category, 'Area184 -Platinum Mix-', 'http://cytus.wikia.com/wiki/Area184_-Platinum_Mix-')
+    addPage(category, 'Gardenia', 'http://cytus.wikia.com/wiki/Gardenia')
+    addPage(category, 'Sweetness Overload!!!', 'http://cytus.wikia.com/wiki/Sweetness_Overload!!!')
+    addPage(category, 'Les Parfums de Celebrez', 'http://cytus.wikia.com/wiki/Les_Parfums_de_Celebrez')
+    addPage(category, 'Afterglow', 'http://cytus.wikia.com/wiki/Afterglow')
+    addPage(category, 'GENESYS', 'http://cytus.wikia.com/wiki/GENESYS')
+    addPage(category, 'STROIA', 'http://cytus.wikia.com/wiki/STROIA')
+    # Chapter T
+    category = addCategory('Chapter T')
+    addPage(category, 'Penglai Movement', 'http://cytus.wikia.com/wiki/Penglai_Movement')
+    addPage(category, 'Aboriginal', 'http://cytus.wikia.com/wiki/Aboriginal')
+    addPage(category, 'Dutch Formosa', 'http://cytus.wikia.com/wiki/Dutch_Formosa')
+    addPage(category, 'Empire of Japan', 'http://cytus.wikia.com/wiki/Empire_of_Japan')
+    addPage(category, 'Money & Money', 'http://cytus.wikia.com/wiki/Money_%26_Money')
+    addPage(category, 'Phubbing', 'http://cytus.wikia.com/wiki/Phubbing')
+    addPage(category, 'Protest', 'http://cytus.wikia.com/wiki/Protest')
+    addPage(category, 'Catastrophe', 'http://cytus.wikia.com/wiki/Catastrophe')
+    addPage(category, 'Rebirth', 'http://cytus.wikia.com/wiki/Rebirth')
+    addPage(category, 'A New Home', 'http://cytus.wikia.com/wiki/A_New_Home')
+    # Chapter D
+    category = addCategory('Chapter D')
+    addPage(category, 'Rainy Memory', 'http://cytus.wikia.com/wiki/Rainy_Memory')
+    addPage(category, 'Undo', 'http://cytus.wikia.com/wiki/Undo')
+    addPage(category, 'Hua Sui Yue', 'http://cytus.wikia.com/wiki/Hua_Sui_Yue')
+    addPage(category, 'I Race The Dawn', 'http://cytus.wikia.com/wiki/I_race_the_dawn')
+    addPage(category, 'Wings of Piano', 'http://cytus.wikia.com/wiki/Wings_of_Piano')
+    addPage(category, 'Utopiosphere', 'http://cytus.wikia.com/wiki/Utopiosphere')
+    addPage(category, 'Fable', 'http://cytus.wikia.com/wiki/Fable')
+    addPage(category, 'Angelic Sphere', 'http://cytus.wikia.com/wiki/Angelic_Sphere')
+    addPage(category, 'Leviathan', 'http://cytus.wikia.com/wiki/Leviathan')
+    addPage(category, 'Magnolia', 'http://cytus.wikia.com/wiki/Magnolia')
+    # Chapter L
+    category = addCategory('Chapter L')
+    addPage(category, 'L1:The Devastated Lower', 'http://cytus.wikia.com/wiki/L1:_The_Devastated_Lower')
+    addPage(category, 'L2:Ascension To The Upper', 'http://cytus.wikia.com/wiki/L2_:_Ascension_To_The_Upper')
+    addPage(category, 'L3:Roar, On The Deserted Lands', 'http://cytus.wikia.com/wiki/L3_:_Roar,_On_The_Deserted_Lands')
+    addPage(category, 'L4:The Unrevealed', 'http://cytus.wikia.com/wiki/L4_:_The_Unrevealed')
+    addPage(category, 'L5:The Revealed', 'http://cytus.wikia.com/wiki/L5_:_The_Revealed')
+    addPage(category, 'L6:Viz Awakened', 'http://cytus.wikia.com/wiki/L6_:_Viz_Awakened')
+    addPage(category, 'L7:Almighty', 'http://cytus.wikia.com/wiki/L7_:_Almighty')
+    addPage(category, 'L8:Meteor - Farewell', 'http://cytus.wikia.com/wiki/L8_:_Meteor_-_Farewell')
+    addPage(category, 'L9:Meteo - Mourn', 'http://cytus.wikia.com/wiki/L9_:_Meteo_-_Mourn')
+    addPage(category, 'L10:In Memory of Maneo.', 'http://cytus.wikia.com/wiki/L10:_In_Memory_of_Maneo.')
+
+
     # Print everything
     for category in Category.objects.all():
         for page in Page.objects.filter(category=category):
             print(category.name, '--', page.title)
-    
+            
+            
 def addCategory(name):
     category = Category.objects.get_or_create(name=name)[0]
-    category.views = random.randint(0, 20)
-    category.likes = random.randint(0, 20)
-    category.save()
     return category
-
-
+    
+    
 def addPage(category, title, url):
     page = Page.objects.get_or_create(category=category, title=title, url=url)[0]
     page.views = random.randint(0, 20)
     page.save()
-    
-    
+        
+        
 if __name__ == '__main__':
     print('開始填入資料...')
     populate()
