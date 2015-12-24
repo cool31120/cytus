@@ -2,6 +2,7 @@ body {
 		background-image:url( '../img/cytus.jpg ' );
 		background-repeat: no-repeat;
 		background-attachment:fixed;
+		background-size:cover;
 }
 
 a {
