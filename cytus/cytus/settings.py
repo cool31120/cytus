@@ -23,7 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(_c6y^gpg$#4%v&8yat0a=$hp5!!lox6te&hz84x9fh_i&1c52'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
+if 'DYNO' not in os.environ:
+    DEBUG = True
+else: # Running on Heroku
+    DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -78,17 +82,23 @@ WSGI_APPLICATION = 'cytus.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'cytusDB',
-        'USER': 'cytus',
-        'PASSWORD': 'cytus',
-        'HOST': 'localhost',
-        'PORT': '',
+if DEBUG==True: # Running on the development environment
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'cytusDB',
+            'USER': 'cytus',
+            'PASSWORD': 'cytus',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
     }
-}
-
+else: # Running on Heroku
+    # Parse database configuration from $DATABASE_URL
+    import dj_database_url
+    DATABASES = {'default':dj_database_url.config()}
+    # Honor the 'X-Forwarded-Proto' header for request.is_secure()
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -127,3 +137,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+if DEBUG==False: # Running on Heroku
+    STATIC_ROOT = 'staticfiles'
