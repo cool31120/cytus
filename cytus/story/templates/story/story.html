@@ -1,7 +1,85 @@
 {% extends "main/base.html" %}
-{% block heading %}故事{% endblock %}
+{% block heading %} 故事或介紹{% endblock %}
 {% block content %}
 
+<p>（欲知詳情，請訪問<a href='http://www.rayark.com/g/cytus/'>Rayark官網 </a>）</p>
+<h2>Chapter I -- Operators</h2>
+<p>「Operators, preserving & continuing lifetime memories eternally;
+ desire for immortality finally comes true through pioneering technologies.」 </p>
+<p>~2130 A.D. ExtenLife Corp. World leading Operator manufacturer</p>
+<h2>Chapter II -- Disaster</h2>
+<p>A mutated virus that is deadly contagious starting to spread out the 
+universe sweepingly while there is absolutely no antidote to the disease, 
+thousands of years of civilizations are on the line thereof. Cruelty shown forth,
+ under the paling moonlight, calamity of destruction brought upon.</p>
+<h2>Chapter III -- Cytus</h2>
+<p>[29/Jul/2970:12:57:55] OPERATOR 201173V: requesting memory data, name=Vanessa</p>
+<p>[29/Jul/2970:12:57:56] OPERATOR 201173V: 200 OK</p>
+<p>[29/Jul/2970:12:57:56] OPERATOR 201173V: requesting emotion data, name=Vanessa</p>
+<p>[29/Jul/2970:12:57:57] OPERATOR 201173V: ERROR: 501 not implemented</p>
+<p>[29/Jul/2970:12:57:57] OPERATOR 201173V: redirect to CYTUS to resolve conflicts</p>
+<h2>Chapter IV -- The Silence</h2>
+<p><img src="http://www.rayark.com/g/cytus/mobile/assets/images/ch4-1.jpg"></p>
+<h2>Chapter V -- Vanessa</h2>
+<p>Dear Diary:</p>
+<p>Is it a fortune or misfortune,</p>
+<p>to take part in the program of memory transferring?!</p>
+<p>I would be able to survive in such a way,</p>
+<p>when everybody else close to me passes away...</p>
+<h2>Chapter VI</h2>
+<pre>function Operator:allocateStorage(size)
+    local db = self:acquireDatabase()
+
+    while db:getAvailableSpace() &lt; size do
+        local dated_item = db:query{
+            number = 1,
+            tag = &quot;emotion&quot;,
+            sort = &quot;timestamp&quot;,
+        }
+        db:remove(dated_item)
+    end
+
+    local chunk = db:reserveSpace(size)
+    zeroMemory(chunk)
+    return chunk
+end</pre>
+<h2>Chapter S</h2>
+<h3>全名為Chapter Symphony</h3>
+<p>本章的樂曲均為古典改編樂曲，
+與其它章節不同的是，本章的樂曲圖示只有兩種，
+雷亞稱其代表著Project Symphony中的兩個派系</p>
+<p>註:Project Symphony為雷亞遊戲將來計劃發售的遊戲</p>
+<h2>Chapter K</h2>
+<h3>全名為Chapter Knight</h3>
+<p>本章講述了一對姐妹之間愛恨情仇的故事，
+整個章節有一定的故事聯繫。
+除了曲圖，部分歌曲遊玩譜面時還會出現一些劇情相關的畫面，
+讓玩家感受到姐妹間的心理和關係變化。</p>
+<p>特別一提，本章的故事取材於Cytus第五章歌曲HOLY KNIGHT</p>
+<h2>Chapter R</h2>
+<h3>全名為Chapter Retro</h3>
+<p>本章特別之處在於從畫面到音樂都充滿著8-bit風格，
+官方宣稱Chapter R可以讓玩家感受經典街機電玩</p>
+<h2>Chaoter M</h2>
+<h3>全名為Chapter Million</h3>
+<p>其章節特別之處在於曲圖多取材於先前章節曲圖，
+歌曲也為先前章節歌曲remix</p>
+<p>所有歌曲的困難等級皆為Lv.9，
+官方表示此為希望玩家拾回當初百萬下載計畫開始時，
+挑戰當時魔王曲Entrance的樂趣</p>
+<h2>Chapter T</h2>
+<h3>全名為Chapter Timelife</h3>
+<p>其章節如其名具有一定的時間軸，
+主要敘述台灣從產生、開發、毀滅、再生、守護的故事</p>
+<h2>Chapter D</h2>
+<h3>全名為Chapter Deemo</h3>
+<p>其章節如其名，收錄雷亞另一節奏遊戲Deemo內精選的10首歌曲，
+在Cytus中體驗不同的感受</p>
+<h2>Chapter L</h2>
+<h3>Chapter L曲目為Chapter VII Loom中魔王曲《L》的延伸</h3>
+<p>其章節特別之處在於全歌曲皆是由交響樂團編曲及演繹，
+有別於過往章節使用電子音樂的慣例；
+並且全歌曲皆與原曲同樣全9級</p>
 <p><a href={% url 'main:main' %}>回首頁</a></p>
 
 {% endblock%}
