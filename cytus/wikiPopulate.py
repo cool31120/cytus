@@ -18,7 +18,7 @@ def populate():
     addPage(category, 'Les Parfums de L,Amour', 'http://cytus.wikia.com/wiki/Les_Parfums_de_L%27Amour')
     addPage(category, 'Retrospective', 'http://cytus.wikia.com/wiki/Retrospective')
     addPage(category, 'The Silence', 'http://cytus.wikia.com/wiki/The_Silence')
-    addPage(category, 'D R G', 'http://http://cytus.wikia.com/wiki/D_R_G')
+    addPage(category, 'D R G', 'http://cytus.wikia.com/wiki/D_R_G')
     addPage(category, 'Secret Garden', 'http://cytus.wikia.com/wiki/Secret_Garden')
     addPage(category, 'Hot Air Balloon', 'http://cytus.wikia.com/wiki/Hot_Air_Balloon')
     # Chapter II
