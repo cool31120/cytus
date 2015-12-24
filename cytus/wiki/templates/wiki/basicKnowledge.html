@@ -1,17 +1,20 @@
 {% extends "main/base.html" %}
+{% load staticfiles %}
 {% block heading %}基礎知識{% endblock %}
 {% block content %}
 
 <h2>玩法</h2>
-<p>當上下移動的黑色線（掃描線）與
-圓形的物體（音符）的圓心重合時點擊音符</p>
-<p>1.普通音符只需點擊即可</p>
-<p>2.鎖鏈音符將帶箭頭的音符（滑塊）按下後不要鬆開，
-並將滑塊沿著斜線和圓點組成的路徑拖動，
-直至拖動到最後一個圓點處方可鬆開。
-注意拖動過程中應保持滑塊圓心始終與掃描線重合</p>
-<p>3.長按音符按下後不要鬆開，原地不動，
-等掃描線到達其末端並顯示判定結果後方可鬆開</p>
+<ul>
+	<li>當上下移動的黑色線（掃描線）與
+	圓形的物體（音符）的圓心重合時點擊音符</li>
+	<li>普通音符只需點擊即可</li>
+	<li>鎖鏈音符將帶箭頭的音符（滑塊）按下後不要鬆開，
+	並將滑塊沿著斜線和圓點組成的路徑拖動，
+	直至拖動到最後一個圓點處方可鬆開。
+	注意拖動過程中應保持滑塊圓心始終與掃描線重合</li>
+	<li>長按音符按下後不要鬆開，原地不動，
+	等掃描線到達其末端並顯示判定結果後方可鬆開</li>
+</ul>
 <br>
 <h2>分數及TP系統</h2>
 <p>Cytus共有五種判定，從好到壞依次為：
@@ -25,12 +28,12 @@ Bad及Miss將會中斷Combo數。</p>
 TP與COMBO數完全無關。</p>
 <table style="border:5px #000000 solid;" rules="all" cellpadding='5';>
 	<tr>
-　<td><img src="http://vignette3.wikia.nocookie.net/cytus/images/6/60/Pperfect.gif/revision/latest?cb=20130310043437&path-prefix=zh" alt="彩Perfect"></td>
-　<td><img src="http://vignette4.wikia.nocookie.net/cytus/images/7/70/Bperfect.gif/revision/latest?cb=20130310043517&path-prefix=zh" alt="黑Perfect"></td>
+　<td><img src={% static 'wiki/img/Pperfect.gif' %} alt="彩Perfect"></td>
+　<td><img src={% static 'wiki/img/Bperfect.gif' %} alt="黑Perfect"></td>
 　</tr>
 　<tr>
-　<td align='center'>▲彩P</td>
-　<td align='center'>▲黑P</td>
+　<td align='center'>▲彩Perfect</td>
+　<td align='center'>▲黑Perfect</td>
 　</tr>
 </table>
 <p>當結束一局遊戲時，將根據分數給予對應的等級評定。</p>

@@ -1,18 +1,26 @@
 {% extends "main/base.html" %}
+{% load staticfiles %}
 {% block heading %}喚醒你/妳的音樂細胞{% endblock %}
 {% block content %}
 
 <h2>{{like}}</h2>
-<p><a href={% url 'main:about' %}>關於</a></p>
-<p><a href={% url 'wiki:wiki' %}>Wiki</a></p>
-<p><a href={% url 'story:story' %}>故事或介紹</a></p>
-<p><a href={% url 'record:record' %}>Cytus之金氏紀錄</a></p>
+<table>
+	<tr><td><a href={% url 'main:about' %} >關於</a></td></tr>
+	<tr><td><a href={% url 'wiki:wiki' %}>Wiki</a></td></tr>
+	<tr><td><a href={% url 'story:story' %}>故事或介紹</a></td></tr>
+	<tr><td><a href={% url 'record:record' %}>Cytus之金氏紀錄</a></td></tr>
+</table>
+
+<strong>此專案僅適用於課程作業之用途</strong>
+<p>參考資料如下：</p>
+<table>
+	<tr><td><a href="http://www.rayark.com/g/cytus/" >Cytus官網</a></td></tr>
+	<tr><td><a href="https://zh.wikipedia.org/wiki/Cytus" >維基百科</a></td></tr>
+	<tr><td><a href="http://zh.cytus.wikia.com/wiki/Main_Page" >Cytus中文版維基</a></td></tr>
+	<tr><td><a href="http://cytus.wikia.com/wiki/Cytus_Wiki" >Cytus英文版維基</a></td></tr>
+	<tr><td><a href="http://forum.gamer.com.tw/A.php?bsn=22009" >巴哈姆特之Cytus哈啦版</a></td></tr>
+</table>
+
 <p>現在時間:{{now}}</p>
 
-<p>參考資料如下：</p>
-<p><a href="http://www.rayark.com/g/cytus/" >Cytus官網</a></p>
-<p><a href="https://zh.wikipedia.org/wiki/Cytus" >維基百科</a></p>
-<p><a href="http://zh.cytus.wikia.com/wiki/Main_Page" >Cytus中文版維基</a></p>
-<p><a href="http://cytus.wikia.com/wiki/Cytus_Wiki" >Cytus英文版維基</a></p>
-<p><a href="http://forum.gamer.com.tw/A.php?bsn=22009" >巴哈姆特之Cytus哈啦版</a></p>
 {% endblock %}

@@ -1,4 +1,5 @@
 {% extends "main/base.html" %}
+{% load staticfiles %}
 {% block heading %} 故事或介紹{% endblock %}
 {% block content %}
 
@@ -13,19 +14,25 @@ universe sweepingly while there is absolutely no antidote to the disease,
 thousands of years of civilizations are on the line thereof. Cruelty shown forth,
  under the paling moonlight, calamity of destruction brought upon.</p>
 <h2>Chapter III -- Cytus</h2>
-<p>[29/Jul/2970:12:57:55] OPERATOR 201173V: requesting memory data, name=Vanessa</p>
-<p>[29/Jul/2970:12:57:56] OPERATOR 201173V: 200 OK</p>
-<p>[29/Jul/2970:12:57:56] OPERATOR 201173V: requesting emotion data, name=Vanessa</p>
-<p>[29/Jul/2970:12:57:57] OPERATOR 201173V: ERROR: 501 not implemented</p>
-<p>[29/Jul/2970:12:57:57] OPERATOR 201173V: redirect to CYTUS to resolve conflicts</p>
+<table>
+	<tr><td>[29/Jul/2970:12:57:55] OPERATOR 201173V: requesting memory data, name=Vanessa</tr></td>
+	<tr><td>[29/Jul/2970:12:57:56] OPERATOR 201173V: 200 OK</tr></td>
+	<tr><td>[29/Jul/2970:12:57:56] OPERATOR 201173V: requesting emotion data, name=Vanessa</tr></td>
+	<tr><td>[29/Jul/2970:12:57:57] OPERATOR 201173V: ERROR: 501 not implemented</tr></td>
+	<tr><td>[29/Jul/2970:12:57:57] OPERATOR 201173V: redirect to CYTUS to resolve conflicts</tr></td>
+</table>
 <h2>Chapter IV -- The Silence</h2>
-<p><img src="http://www.rayark.com/g/cytus/mobile/assets/images/ch4-1.jpg"></p>
+<p><img src={% static 'story/img/thesilence.jpg' %} alt=TheSilence></p>
 <h2>Chapter V -- Vanessa</h2>
 <p>Dear Diary:</p>
-<p>Is it a fortune or misfortune,</p>
-<p>to take part in the program of memory transferring?!</p>
-<p>I would be able to survive in such a way,</p>
-<p>when everybody else close to me passes away...</p>
+<table>
+<tr><td>Is it a fortune or misfortune,</tr></td>
+<tr><td>to take part in the program of memory transferring?!</tr></td>
+</table><p></p>
+<table>
+<tr><td>I would be able to survive in such a way,</tr></td>
+<tr><td>when everybody else close to me passes away...</tr></td>
+</table>
 <h2>Chapter VI</h2>
 <pre>function Operator:allocateStorage(size)
     local db = self:acquireDatabase()
