@@ -3,7 +3,7 @@ from wiki.models import Category, Page
 
 
 class CategoryForm(forms.ModelForm):
-    name = forms.CharField(max_length=128, label='分類名稱', help_text='(請輸入分類名稱)')
+    name = forms.CharField(max_length=128, label='章節名稱', help_text='(請輸入章節名稱)')
 
     class Meta:
         model = Category
@@ -11,8 +11,8 @@ class CategoryForm(forms.ModelForm):
         
         
 class PageForm(forms.ModelForm):
-    title = forms.CharField(max_length=128, label='網頁標題')
-    url = forms.URLField(max_length=128, label='網頁網址')
+    title = forms.CharField(max_length=128, label='曲目標題')
+    url = forms.URLField(max_length=128, label='曲目網址')
 
     class Meta:
         model = Page
