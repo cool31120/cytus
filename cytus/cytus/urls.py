@@ -7,5 +7,6 @@ urlpatterns = [
     url(r'^wiki/', include('wiki.urls', namespace='wiki')),
     url(r'^story/', include('story.urls', namespace='story')),
     url(r'^record/', include('record.urls', namespace='record')),
+    url(r'^account/', include('account.urls', namespace='account')),
     url(r'^.*', include('main.urls')),
 ]

@@ -130,7 +130,7 @@ def populate():
     addPage(category, 'Warlords of Atlantis', 'http://cytus.wikia.com/wiki/Warlords_of_Atlantis')
     addPage(category, 'To Further Dream', 'http://cytus.wikia.com/wiki/To_Further_Dream')
     addPage(category, 'COMA', 'http://cytus.wikia.com/wiki/COMA')
-    addPage(category, 'Codename: Zero', 'http://cytus.wikia.com/wiki/Codename_:_Zero')
+    addPage(category, 'Code Name: Zero', 'http://cytus.wikia.com/wiki/Codename_:_Zero')
     # Chapter X
     category = addCategory('Chapter X')
     addPage(category, 'Alive: The New World', 'http://cytus.wikia.com/wiki/Alive:The_New_World')
