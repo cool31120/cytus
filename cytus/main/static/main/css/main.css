@@ -12,8 +12,10 @@ a {
 
 .success {
 	color: blue;
+	font-size:135%;
 }
 
 .error {
 	color: red;
+	font-size:135%;
 }

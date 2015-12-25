@@ -1,5 +1,5 @@
 {% extends "main/base.html" %}
-{% block heading %}在"{{category.name}}"分類中新增一筆頁面{% endblock %}
+{% block heading %}在"{{category.name}}"章節中新增一筆曲目{% endblock %}
 {% block content %}
 
 <form method=post action={% url 'wiki:addPage' category.id %}>

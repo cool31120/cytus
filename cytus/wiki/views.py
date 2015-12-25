@@ -10,7 +10,6 @@ def wiki(request):
     return render(request, 'wiki/wiki.html', context)
 
 
-@login_required
 def category(request, categoryID):
     context = {}
     try:

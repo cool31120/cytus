@@ -5,11 +5,10 @@
 
 {% if messages %}
 	{% for message in messages %}
-	<p {% if message.tags %} class={{message.tags}} {% endif %}>{{message}}</p>
+		<p {% if message.tags %} class={{message.tags}} {% endif %}>{{message}}</p>
 	{% endfor %}
 {% endif %}
 
-<h2>{{like}}</h2>
 <table>
 	<tr><td><a href={% url 'main:about' %} >關於</a></td></tr>
 	<tr><td><a href={% url 'wiki:wiki' %}>Wiki</a></td></tr>
@@ -17,12 +16,11 @@
 	<tr><td><a href={% url 'record:record' %}>Cytus之金氏紀錄</a></td></tr>
 </table>
 {% if user.is_authenticated %}
-	<p><a href={% url 'account:userLogout' %}>登出 ({{user.username}})</a></p>
+	<p><a href={% url 'account:userLogout' %}>登出({{user.username}})</a></p>
 {% else %}
 	<p><a href={% url 'account:register' %}>註冊</a></p>
 	<p><a href={% url 'account:userLogin' %}>登入</a></p>
 {% endif %}
-<br>
 <br>
 <strong>此專案僅適用於課程作業之用途</strong>
 <p>參考資料如下：</p>

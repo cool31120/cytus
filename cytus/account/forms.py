@@ -2,9 +2,8 @@ from django import forms
 from django.contrib.auth.models import User
 from account.models import UserProfile
 
-
 class UserForm(forms.ModelForm):
-    username = forms.CharField(label='使用者名稱')
+    username = forms.CharField(label='帳號')
     password = forms.CharField(widget=forms.PasswordInput(), label='密碼')
     password2 = forms.CharField(widget=forms.PasswordInput(), label='確認密碼')
     
@@ -21,9 +20,10 @@ class UserForm(forms.ModelForm):
     
     
 class UserProfileForm(forms.ModelForm):
+    fullName = forms.CharField(max_length=128, label='姓名')
     website = forms.CharField(max_length=128, label='個人網址')
     address = forms.CharField(max_length=128, label='住址')
     
     class Meta:
         model = UserProfile
-        fields = ('website', 'address')
+        fields = ('fullName', 'website', 'address')
