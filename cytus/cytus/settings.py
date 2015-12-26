@@ -141,5 +141,8 @@ STATIC_URL = '/static/'
 
 LOGIN_URL = '/account/userLogin/'
 
+MAIN_URL = '/main/'
+
+
 if DEBUG==False: # Running on Heroku
     STATIC_ROOT = 'staticfiles'

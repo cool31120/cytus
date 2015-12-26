@@ -1,7 +1,6 @@
 {% extends "main/base.html" %}
 {% block heading %}在"{{category.name}}"章節中新增一筆曲目{% endblock %}
 {% block content %}
-
 <form method=post action={% url 'wiki:addPage' category.id %}>
 	{% csrf_token %}
 	{{form.as_p}}
@@ -10,5 +9,4 @@
 <br>
 <p><a href={% url 'wiki:category' category.id %}>回{{category.name}}網頁
 </a></p>
-
 {% endblock %}

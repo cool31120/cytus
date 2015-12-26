@@ -1,7 +1,6 @@
 {% extends "main/base.html" %}
 {% block heading %}修改曲目名稱{% endblock %}
 {% block content %}
-
 <form method=post action={% url 'wiki:updatePage' page.id %}>
 	{% csrf_token %}
 	{{form.as_p}}
@@ -10,5 +9,4 @@
 <br>
 <p><a href={% url 'wiki:category' page.category.id %}>回「{{page.category.name}}」網頁
 </a></p>
-
 {% endblock %}

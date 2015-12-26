@@ -1,7 +1,6 @@
 {% extends "main/base.html" %}
 {% block heading %}新增章節分類{% endblock %}
 {% block content %}
-
 <form method=post action={% url 'wiki:addCategory' %}>
 	{% csrf_token %}
 	{{form.as_p}}
@@ -10,5 +9,4 @@
 <br>
 <br>
 <p><a href={% url 'wiki:wiki' %}>回 Wiki 網頁</a></p>
-
 {% endblock %}

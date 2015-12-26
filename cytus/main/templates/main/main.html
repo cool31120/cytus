@@ -2,13 +2,11 @@
 {% load staticfiles %}
 {% block heading %}喚醒你/妳的音樂細胞{% endblock %}
 {% block content %}
-
 {% if messages %}
 	{% for message in messages %}
 		<p {% if message.tags %} class={{message.tags}} {% endif %}>{{message}}</p>
 	{% endfor %}
 {% endif %}
-
 <table>
 	<tr><td><a href={% url 'main:about' %} >關於</a></td></tr>
 	<tr><td><a href={% url 'wiki:wiki' %}>Wiki</a></td></tr>
@@ -31,7 +29,5 @@
 	<tr><td><a href="http://cytus.wikia.com/wiki/Cytus_Wiki" >Cytus英文版維基</a></td></tr>
 	<tr><td><a href="http://forum.gamer.com.tw/A.php?bsn=22009" >巴哈姆特之Cytus哈啦版</a></td></tr>
 </table>
-
 <p>現在時間:{{now}}</p>
-
 {% endblock %}
